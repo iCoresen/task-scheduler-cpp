@@ -28,8 +28,6 @@ task_scheduler/
 │   └── main.cpp          # 示例入口
 ```
 
----
-
 ## 核心模块说明
 
 ### 1. ThreadPool（线程池）
@@ -45,8 +43,6 @@ task_scheduler/
 * 条件变量唤醒逻辑：
   `stop || !tasks.empty()`
 
----
-
 ### 2. Task 模型
 
 每个任务包含：
@@ -61,8 +57,6 @@ task_scheduler/
 
 * 整体任务依赖构成一个 **DAG**
 * 使用“入度归零”作为任务可执行条件
-
----
 
 ### 3. Scheduler（调度器）
 
@@ -80,8 +74,6 @@ Scheduler 负责：
 4. 任务完成后更新依赖计数
 5. 新解锁的任务进入 ready queue
 
----
-
 ## 并发与同步策略
 
 * **互斥量（mutex）**：
@@ -95,8 +87,6 @@ Scheduler 负责：
   * 任务剩余依赖数（in-degree）
 
 该设计在保证正确性的前提下，尽量减少锁粒度，避免不必要的阻塞。
-
----
 
 ## 构建与运行
 
@@ -114,8 +104,6 @@ make
 ```bash
 ./task_scheduler
 ```
-
----
 
 ## 技术栈
 
