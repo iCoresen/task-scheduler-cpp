@@ -111,9 +111,3 @@ make
 * STL（thread / mutex / condition_variable / atomic）
 * CMake
 * Linux / macOS
-
----
-
-## 总结
-
-该项目展示了我在 **C++ 并发编程、任务调度模型与工程结构设计** 方面的实践能力。
